@@ -1,0 +1,28 @@
+{
+  "name": "maintenance-server",
+  "version": "1.0.0",
+  "description": "Maintenance server for wormhole mapper. Prunes the DB, creates leaderboard, etc.",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oliver S",
+  "license": "None",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "expect.js": "^0.3.1",
+    "gulp": "^3.8.10",
+    "gulp-install": "^0.2.0",
+    "gulp-shell": "^0.2.11",
+    "mocha": "^2.0.1"
+  },
+  "dependencies": {
+    "express": "^4.10.5",
+    "moment": "^2.8.4",
+    "q": "^1.1.2",
+    "request": "^2.51.0"
+  }
+}

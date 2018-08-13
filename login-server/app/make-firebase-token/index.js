@@ -1,0 +1,1 @@
+﻿module.exports = require('./make-firebase-token.js');

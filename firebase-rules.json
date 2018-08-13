@@ -1,0 +1,52 @@
+{
+  "rules": {
+    "bridges": {
+      ".read": "auth != null",
+      ".write": "auth != null"    
+    },
+    "leaderboard-new": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "metadata": {
+      ".read": "auth != null",
+      ".write": "auth.isAdmin === true"    
+    },
+    "signatures": {
+      ".read": "auth != null",
+      ".write": "auth != null"    
+    },
+    "systems": {
+      ".read": "auth != null",
+      ".write": "auth != null"    
+    },
+    "users": {
+      ".read": "auth != null",
+      ".write": "auth != null"    
+    },
+    "wormholes": {
+      ".read": "auth != null",
+      ".write": "auth != null"    
+    },    
+    "authorizations": {
+      ".read": "auth.isAdmin === true",
+      ".write": "auth.isAdmin === true"      
+    },    
+    "wormhole-changelogs": {
+      ".read": "false",
+      ".write": "false"    
+    },
+    "wormhole-import-records": {
+      ".read": "false",
+      ".write": "false"
+    } ,
+    "r-l": {
+      ".read": "auth.isAdmin === true",
+      ".write": "auth != null"    
+    },
+    "login-log": {
+      ".read": "auth.isAdmin === true",
+      ".write": "false"
+    }
+  }
+}

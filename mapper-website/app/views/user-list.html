@@ -1,0 +1,81 @@
+﻿<div class="panel panel-default" style="overflow-x:auto;">
+
+    <h3 class="panel-header">
+        Users
+    </h3>
+
+    <table class="table table-condensed table-striped table-hover">
+        <thead>
+            <tr>
+                <th style="width:1%;"></th>
+                <th>
+                    Name
+                    <a href="" class="glyphicon glyphicon-sort glyphicon-btn"
+                       ng-click="sort('name')"></a>
+                </th>
+                <th>
+                    Corporation
+                    <a href="" class="glyphicon glyphicon-sort glyphicon-btn"
+                       ng-click="sort('corporation')"></a>
+                </th>
+                <th>
+                    Alliance
+                    <a href="" class="glyphicon glyphicon-sort glyphicon-btn"
+                       ng-click="sort('alliance')"></a>
+                </th>
+                <th>
+                    Wormholes Discovered
+                    <a href="" class="glyphicon glyphicon-sort glyphicon-btn"
+                       ng-click="sort('wormholesAdded')"></a>
+                </th>
+                <th>
+                    Route Finder Queries
+                    <a href="" class="glyphicon glyphicon-sort glyphicon-btn"
+                       ng-click="sort('routesSearched')"></a>
+                </th>
+                <th>
+                    Last Contribution
+                    <a href="" class="glyphicon glyphicon-sort glyphicon-btn"
+                       ng-click="sort('lastModified')"></a>
+                </th>
+                <th>
+                    Last Activity
+                    <a href="" class="glyphicon glyphicon-sort glyphicon-btn"
+                       ng-click="sort('lastActivity')"></a>
+                </th>
+            </tr>
+        </thead>
+
+        <tr ng-repeat="user in items track by user.data.id" class="vertical-middle">
+            <td><img src="{{user.picUrl}}" style="width:32px; height:32px;"/> </td>
+            <td>
+                <a href="" ui-sref="user-details({user: user.name})">
+                    {{user.name}}
+                </a>
+            </td>
+            <td>{{user.corporation}}</td>
+            <td>{{user.alliance}}</td>
+            <td>
+                <span ng-if="user.wormholesAdded">
+                    {{user.wormholesAdded}}
+                </span>
+            </td>
+            <td>
+                <span ng-if="user.routesSearched">
+                    {{user.routesSearched}}
+                </span>
+            </td>
+            <td>
+                <a class="abbr" ng-if="user.lastModified"
+                   data-tooltip="{{user.lastModifiedPretty}}"
+                   data-tooltip-placement="right">{{user.lastModifiedFuzzy}}</a>
+            </td>
+            <td>
+                <a class="abbr" ng-if="user.lastActivity"
+                   data-tooltip="{{user.lastActivityPretty}}"
+                   data-tooltip-placement="right">{{user.lastActivityFuzzy}}</a>
+            </td>
+            
+        </tr>
+    </table>
+</div>

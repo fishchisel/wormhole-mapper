@@ -1,0 +1,120 @@
+﻿<div class="row">
+
+    <div class="col-lg-10 col-sm-9" data-ui-view>
+
+    </div>
+
+    <div class="col-lg-2 col-sm-3">
+        <div>
+            <!-- start/end system-->
+            <div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Route Parameters
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="form-group has-feedback">
+                            <label class="control-label">
+                                start system
+                            </label>
+                            <a href="" class="pull-right glyphicon glyphicon-random glyphicon-btn"
+                               ng-show="startSystem && endSystem"
+                               ng-click="reverse()"></a>
+                            <input class="form-control"
+                                   data-system-search="startSystem"
+                                   data-search-query="startSystemQuery" />
+                            <span class="glyphicon glyphicon-ok form-control-feedback"
+                                  ng-show="startSystem"></span>
+                        </div>
+
+                        <div class="form-group has-feedback">
+                            <label class="control-label">end system</label>
+                            <input class="form-control"
+                                   data-system-search="endSystem"
+                                   data-search-query="endSystemQuery" />
+                            <span class="glyphicon glyphicon-ok form-control-feedback"
+                                  ng-show="endSystem"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--system filters-->
+            <div class="form-horizontal">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        System Filters
+                    </div>
+
+                    <div data-toggle-list="systemTypes" class="list-group" data-three-value="true"></div>
+                </div>
+            </div>
+
+            <!-- method filters-->
+            <div class="form-horizontal">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Transport Method Filters
+                    </div>
+                    <div data-toggle-list="transportMethods" class="list-group"></div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Advanced Parameters
+                </div>
+                <!-- TODO: make this not terrible-->
+
+                <div class="panel-body">
+                    <div class="form-group has-feedback">
+                        <label class="control-label">
+                            Min bridge distance 
+                        </label>
+                        <div>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-default"
+                                        ng-class="{'active': minBridgeDistance===3}"
+                                        ng-click="minBridgeDistance=3">3 J</button>
+                                <button type="button" class="btn btn-default"
+                                        ng-class="{'active': minBridgeDistance===5}"
+                                        ng-click="minBridgeDistance=5">5 J</button>
+                                <button type="button" class="btn btn-default"
+                                        ng-class="{'active': minBridgeDistance===8}"
+                                        ng-click="minBridgeDistance=8">8 J</button>
+                                <button type="button" class="btn btn-default"
+                                        ng-class="{'active': minBridgeDistance===13}"
+                                        ng-click="minBridgeDistance=13">13 J</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label class="control-label">
+                            Max results
+                        </label>
+                        <div>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-default"
+                                        ng-class="{'active': maxResults===10}"
+                                        ng-click="maxResults=10">10</button>
+                                <button type="button" class="btn btn-default"
+                                        ng-class="{'active': maxResults===20}"
+                                        ng-click="maxResults=20">20</button>
+                                <button type="button" class="btn btn-default"
+                                        ng-class="{'active': maxResults===50}"
+                                        ng-click="maxResults=50">50</button>
+                                <button type="button" class="btn btn-default"
+                                        ng-class="{'active': maxResults===100}"
+                                        ng-click="maxResults=100">100</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

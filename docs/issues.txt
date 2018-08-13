@@ -1,0 +1,23 @@
+Include proper jump fatigue calcs
+
+Route finder should only prompt for an update if the spread of routes changes
+
+Add K162 to autocomplete
+
+Add 'like' buttom to routes and wormholes
+
+Add class and number of statics of W-space systems
+
+Add local static data caching to improve load times
+
+Set security roles for firebase
+
+	In system details view, distance should not be displayed for the home system or for w-space systems.
+
+	"jumps" should not be pluralized for single distances.
+
+Change systems to use less memory
+
+Change route finder to be complete
+
+Tickbox for bridges as to whether they are added by default to the route finder
